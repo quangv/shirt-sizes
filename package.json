@@ -1,0 +1,30 @@
+{
+  "name": "shirt-sizes",
+  "version": "1.0.0",
+  "description": "Shirt Size App",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quangv/shirt-sizes.git"
+  },
+  "keywords": [
+    "react",
+    "jest",
+    "redux",
+    "babel"
+  ],
+  "author": "Quang Van",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quangv/shirt-sizes/issues"
+  },
+  "homepage": "https://github.com/quangv/shirt-sizes#readme",
+  "devDependencies": {
+    "webpack": "^1.12.8",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
