@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/quangv/shirt-sizes#readme",
   "devDependencies": {
+    "jest-cli": "^0.8.0",
     "webpack": "^1.12.8",
     "webpack-dev-server": "^1.12.1"
   }
