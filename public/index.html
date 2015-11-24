@@ -3,6 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Shirt Sizes</title>
+  <style>
+    body {
+      background: rgba(255,93,177,1);
+      background: -moz-linear-gradient(top, rgba(255,93,177,1) 0%, rgba(142,72,186,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,93,177,1)), color-stop(100%, rgba(142,72,186,1)));
+      background: -webkit-linear-gradient(top, rgba(255,93,177,1) 0%, rgba(142,72,186,1) 100%);
+      background: -o-linear-gradient(top, rgba(255,93,177,1) 0%, rgba(142,72,186,1) 100%);
+      background: -ms-linear-gradient(top, rgba(255,93,177,1) 0%, rgba(142,72,186,1) 100%);
+      background: linear-gradient(to bottom, rgba(255,93,177,1) 0%, rgba(142,72,186,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#8e48ba', GradientType=0 ); 
+                
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    #app {
+      width: 700px;
+      background-color: white;
+      padding: 1em;
+      border-radius: 0.5em;
+    }
+    h1 {
+      text-align: center;
+      font-family: monospace;
+      font-size: 1.9em;
+    }
+    .choice-box {
+      text-align: center;
+      font-family: sans-serif;
+    }
+    label {
+      font-size: 1.5em;
+      margin-right: 1em;
+    }
+    label input{
+      position: relative;
+      left: 5px;
+      top: -2px;
+    }
+    ul {
+    }
+    li {
+      display: inline;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
