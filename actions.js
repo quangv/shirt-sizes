@@ -6,7 +6,7 @@ export const SELECT_SIZE = 'SELECT_SIZE'
 
 // Other Constants
 
-export const SIZES = {
+export const Sizes = {
   SMALL : 'SMALL',
   MEDIUM : 'MEDIUM',
   LARGE : 'LARGE',
