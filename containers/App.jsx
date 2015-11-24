@@ -1,8 +1,10 @@
 import React from 'react';
-import ChoiceBox from '../components/ChoiceBox'
-import Results from '../components/Results'
+import {connect} from 'react-redux';
 
-class App extends React.Component {
+import ChoiceBox from '../components/ChoiceBox';
+import Results from '../components/Results';
+
+export class App extends React.Component {
   render(){
     return  (
       <div>
@@ -14,5 +16,8 @@ class App extends React.Component {
   }
 }
 
-//export default App
-module.exports = App
+function select(state){
+  return state;
+}
+
+export default connect(select)(App);

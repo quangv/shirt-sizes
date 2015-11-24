@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 
-const App = require('../containers/App');
+const {App} = require('../containers/App');
 const ChoiceBox = require('../components/ChoiceBox');
 const Results = require('../components/Results');
 
