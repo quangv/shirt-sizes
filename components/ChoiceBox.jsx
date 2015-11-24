@@ -27,7 +27,7 @@ class ChoiceBox extends React.Component {
     return (
       <div>
         {choices.map(choice => {
-          return <Choice key={choice.title} title={choice.title} isSelected={this.props.selectedSize === choice.size} />
+          return <Choice key={choice.title} size={choice.size} title={choice.title} isSelected={this.props.selectedSize === choice.size} onSelect={this.props.selectSize} />
         })}
       </div>
     )
@@ -35,7 +35,8 @@ class ChoiceBox extends React.Component {
 }
 
 ChoiceBox.propTypes = {
-  selectedSize : React.PropTypes.oneOf(Object.keys(Sizes))
+  selectedSize : React.PropTypes.oneOf(Object.keys(Sizes)),
+  selectSize : React.PropTypes.func
 }
 
 //export default ChoiceBox

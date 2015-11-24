@@ -11,7 +11,7 @@ class Choice extends React.Component {
       input = <input type="radio" />
     }
 
-    return  <label onClick={this.props.onSelect}>{input} {this.props.title}</label>
+    return  <label onClick={(e)=>{this.props.onSelect(this.props.size)}}>{input} {this.props.title}</label>
   }
 }
 

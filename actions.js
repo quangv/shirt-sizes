@@ -20,9 +20,12 @@ export const Sizes = {
 // Action Creators
 
 export function selectSize(size){
-  return {
-    type: SELECT_SIZE,
-    size
+  return (dispatch)=>{
+    dispatch({
+      type: SELECT_SIZE,
+      size
+    });
+    return dispatch(fetchShirts(size));
   }
 }
 
@@ -48,7 +51,7 @@ export function fetchShirts(size){
     dispatch(requestShirts(size))
 
     const sizeMap = {
-      SMALL : 'baby',
+      SMALL : 'new born',
       MEDIUM : 'children',
       LARGE : 'women',
       XLARGE : 'men'

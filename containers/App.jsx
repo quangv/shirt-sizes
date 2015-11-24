@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import ChoiceBox from '../components/ChoiceBox';
 import Results from '../components/Results';
 
-import {fetchShirts} from '../actions';
+import {fetchShirts, selectSize} from '../actions';
 
 export class App extends React.Component {
   componentDidMount(){
@@ -15,7 +15,10 @@ export class App extends React.Component {
     return  (
       <div>
         <h1>Select a Shirt Size</h1>
-        <ChoiceBox selectedSize={this.props.selectedSize} />
+        <ChoiceBox selectedSize={this.props.selectedSize}
+                   selectSize={ size=> 
+                     this.props.dispatch(selectSize(size))}
+        />
         <Results images={this.props.shirts} />
       </div>
     )
