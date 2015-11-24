@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import ChoiceBox from '../components/ChoiceBox'
 
 class App extends React.Component {

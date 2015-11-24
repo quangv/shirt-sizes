@@ -14,7 +14,7 @@ describe('App', function(){
     expect(true).toBeTruthy();
   });
 
-  it.only('should render ChoiceBox', function(){
+  it('should render ChoiceBox', function(){
     let renderer = TestUtils.createRenderer();
     renderer.render(<App />);
     let output = renderer.getRenderOutput();
