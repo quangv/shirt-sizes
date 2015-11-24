@@ -38,7 +38,7 @@ export function receiveShirts(size, json){
   return {
     type: RECEIVE_SHIRTS,
     size,
-    shirts: json.data.children.map(child => child.data)
+    shirts: json.responseData.results.map(child => child.tbUrl)
   }
 }
 
@@ -54,7 +54,7 @@ export function fetchShirts(size){
       XLARGE : 'men'
     }
 
-    let url = 'https://api.datamarket.azure.com/Bing/Search/v1/Image?Query=%27shirts%20' + sizeMap[size] + '%27&ImageFilters=%27Size%3ASmall%2BAspect%3ASquare%27&accessToken=Bearer+Audience%3Dhttps%253a%252f%252fapi.datamarket.azure.com%252f%26ExpiresOn%3D1448351380%26Issuer%3Dhttps%253a%252f%252fdatamarket.accesscontrol.windows.net%252f%26http%253a%252f%252fschemas.xmlsoap.org%252fws%252f2005%252f05%252fidentity%252fclaims%252fnameidentifier%3Df6abd771-2d23-4149-9022-22c38d200e36%26http%253a%252f%252fschemas.xmlsoap.org%252fws%252f2009%252f09%252fidentity%252fclaims%252factor%3Dexplorer%26http%253a%252f%252fschemas.microsoft.com%252faccesscontrolservice%252f2010%252f07%252fclaims%252fpermissions%3Daccount%26http%253a%252f%252fschemas.microsoft.com%252faccesscontrolservice%252f2010%252f07%252fclaims%252fidentityprovider%3DDataMarketIdentityProvider%26HMACSHA256%3DiJER%252fURgMQrtDW9Pqu1kOQpFvhE6hcN9CHqEg837Rbo%253d&%24top=100&$format=json'
+    let url = 'https://crossorigin.me/http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=shirts%20' + sizeMap[size];
 
     return fetch(url)
       .then(req => req.json())

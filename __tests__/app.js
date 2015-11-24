@@ -40,4 +40,13 @@ describe('App', function(){
     
     expect(output.props.children[1].props.selectedSize).toBe('sweet');
   });
+
+  it('should pass shirts to Results', function(){
+    let renderer = TestUtils.createRenderer();
+    let shirts = [1,2,3];
+    renderer.render(<App shirts={shirts} />);
+    let output = renderer.getRenderOutput();
+    
+    expect(output.props.children[2].props.images).toBe(shirts);
+  });
 })
