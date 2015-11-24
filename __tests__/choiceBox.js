@@ -4,6 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 
+import {Sizes} from '../actions';
+
 const ChoiceBox = require('../components/ChoiceBox');
 
 describe('ChoiceBox', function(){
@@ -36,6 +38,33 @@ describe('ChoiceBox', function(){
     });
     it('first choice should be xl', function(){
       expect(output.props.children[3].props.title).toBe('xl');
+    });
+  });
+
+  describe('should pass isSelected to choice based on selectedSize', function(){
+    let output, choice;
+
+    function setup(size){
+      let renderer = TestUtils.createRenderer();
+      renderer.render(<ChoiceBox selectedSize={size} />);
+      return renderer.getRenderOutput();
+    };
+
+    it('should work for small', function(){
+      choice = setup(Sizes.SMALL).props.children[0];
+      expect(choice.props.isSelected).toBeTruthy()
+    });
+    it('should work for medium', function(){
+      choice = setup(Sizes.MEDIUM).props.children[1];
+      expect(choice.props.isSelected).toBeTruthy()
+    });
+    it('should work for large', function(){
+      choice = setup(Sizes.LARGE).props.children[2];
+      expect(choice.props.isSelected).toBeTruthy()
+    });
+    it('should work for xlarge', function(){
+      choice = setup(Sizes.XLARGE).props.children[3];
+      expect(choice.props.isSelected).toBeTruthy()
     });
   });
 })

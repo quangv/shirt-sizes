@@ -32,4 +32,12 @@ describe('App', function(){
     expect(output.props.children[2].type).toBe(Results);
 
   });
+
+  it('should pass selectedSize to ChoiceBox', function(){
+    let renderer = TestUtils.createRenderer();
+    renderer.render(<App selectedSize="sweet" />);
+    let output = renderer.getRenderOutput();
+    
+    expect(output.props.children[1].props.selectedSize).toBe('sweet');
+  });
 })

@@ -5,7 +5,7 @@ class Choice extends React.Component {
     let input;
 
     if(this.props.isSelected){
-      input = <input type="radio" checked />
+      input = <input type="radio" checked readOnly />
       
     }else {
       input = <input type="radio" />
