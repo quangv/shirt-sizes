@@ -2,6 +2,11 @@
 
 Going to be a TDD app, using Webkit, React & Redux
 
+
+![App ScreenShot](screenshot.png "App ScreenShot")
+
+[http://shirts.surge.sh/](http://shirts.surge.sh/)
+
 ## Styleguides
 
 ### Git Commit Messages
