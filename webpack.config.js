@@ -20,6 +20,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: './public'
+    contentBase: './public',
+    host: '0.0.0.0'
   }
 }
