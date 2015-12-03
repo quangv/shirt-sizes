@@ -1,6 +1,6 @@
 # Shirt Sizes
 
-Going to be a TDD app, using Webkit, React & Redux
+Going to be a TDD app, using Webpack, React & Redux
 
 
 ![App ScreenShot](screenshot.png "App ScreenShot")
