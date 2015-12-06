@@ -61,7 +61,7 @@ export function fetchShirts(size){
     // let url = 'https://crossorigin.me/http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=shirts%20' + sizeMap[size];
 
     let accountKey = 'i22TldK9v1oR+Zb0cNvkwI0IVciDHa8aePmOBAiXE/A'  // on production especially client-side sites, this shouldn't be hard-coded.
-    let url = 'https://api.datamarket.azure.com/Bing/Search/v1/Image?$format=json&Query=%27shirts%20' + sizeMap[size] + '%27&ImageFilters=%27Size%3ASmall%2BAspect%3ASquare%27';
+    let url = 'https://api.datamarket.azure.com/Bing/Search/v1/Image?$format=json&Query=%27shirts%20' + sizeMap[size] + '%27';
 
     return fetch(url, {
       headers: {
