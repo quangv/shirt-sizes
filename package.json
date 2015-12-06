@@ -34,6 +34,7 @@
     "isomorphic-fetch": "^2.2.0",
     "jest-cli": "^0.8.0",
     "react": "^0.14.3",
+    "react-addons-css-transition-group": "^0.14.3",
     "react-addons-test-utils": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",

@@ -1,11 +1,18 @@
 import React from 'react';
+import ReactCSSTransition from 'react-addons-css-transition-group';
 
 class Results extends React.Component {
   render(){
     let results = this.props.images.map(function(uri){
       return <li key={uri}><img src={uri} /></li>
     });
-    return  <ul>{results}</ul>
+    return (
+      <ul>
+        <ReactCSSTransition transitionName="result" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+          {results}
+        </ReactCSSTransition>
+      </ul>
+    )
   }
 }
 
