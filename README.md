@@ -33,3 +33,10 @@ Going to be a TDD app, using Webpack, React & Redux
     * :shirt: `:shirt:` when removing linter warnings
 
 [style guide by atom](https://github.com/atom/atom/blob/master/CONTRIBUTING.md)
+
+
+## To Deploy
+
+```
+npm run deploy
+```
