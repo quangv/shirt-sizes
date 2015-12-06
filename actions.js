@@ -41,7 +41,7 @@ export function receiveShirts(size, json){
   return {
     type: RECEIVE_SHIRTS,
     size,
-    shirts: json.responseData.results.map(child => child.tbUrl)
+    shirts: json.d.results.slice(0,9).map(child => child.Thumbnail.MediaUrl)
   }
 }
 
@@ -57,9 +57,17 @@ export function fetchShirts(size){
       XLARGE : 'men'
     }
 
-    let url = 'https://crossorigin.me/http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=shirts%20' + sizeMap[size];
+    // Google AJAX Search API use to work, doesn't work anymore.
+    // let url = 'https://crossorigin.me/http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=shirts%20' + sizeMap[size];
 
-    return fetch(url)
+    let accountKey = 'i22TldK9v1oR+Zb0cNvkwI0IVciDHa8aePmOBAiXE/A'  // on production especially client-side sites, this shouldn't be hard-coded.
+    let url = 'https://api.datamarket.azure.com/Bing/Search/v1/Image?$format=json&Query=%27shirts%20' + sizeMap[size] + '%27&ImageFilters=%27Size%3ASmall%2BAspect%3ASquare%27';
+
+    return fetch(url, {
+      headers: {
+        Authorization: 'Basic ' + btoa(accountKey + ':' + accountKey)  // base64 encode
+      }
+    })
       .then(req => req.json())
       .then(json => dispatch(receiveShirts(size, json)))
   }
